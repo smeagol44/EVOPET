@@ -4,6 +4,8 @@ A keyboard-first virtual pet prototype with a Game Boy Color inspired palette. R
 
 **Play:** https://smeagol44.github.io/EVOPET/
 
+![EVOPET Pocket Edition](docs/prototype-preview.jpg)
+
 ## Controls
 
 | Input | Action |
@@ -52,6 +54,8 @@ Changes pushed to `main` run syntax checks and the Node test suite, then deploy 
 - `public/src/render.js`: limited-palette canvas renderer and pixel shapes.
 - `public/assets/`: supplied Construct sprites/font and sprites extracted from the diagram.
 - `tests/core.test.js`: actual care-through-lifecycle tests for every final, save integrity, heritage, and dungeon integration.
+- `tests/keyboard.test.js`: drives the real browser entry point through all five minigames, pause/cancel, growth, archive, dungeon drafting/combat, and next-egg inheritance using only the supported keys.
+- `docs/QA.md`: validation performed and its limits.
 - `docs/DESIGN.md`: implemented rules, source comparison and prototype limitations.
 
 ## Persistence

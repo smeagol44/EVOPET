@@ -31,7 +31,7 @@ function importSave(){const input=document.createElement('input');input.type='fi
  {label:`Restore generation ${candidate.generation}`,action:()=>{try{localStorage.setItem(SAVE_KEY+'.before-restore',encode(state));}catch{message('Restore paused',['Your current journey could not be backed up. Export it first, then try again.']);return;}state=candidate;save();state.dungeon?go({type:'dungeon',sel:0,member:0}):habitat();notify('Backup restored.');}}
  ],'Your current save is backed up before replacement.');}catch{message('Could not restore',['This is not a valid EVOPET v1 save. Your current journey is unchanged.']);}});input.click();}
 function pause(){
- if(view.type==='list'&&view.isPause){back();return;}if(view.type==='title'){help();return;}
+ if(view.type==='list'&&view.isPause){back();return;}if(view.type==='title'){handle('KeyZ');return;}
  const prev=view;menu('START / PAUSED',[
  {label:'Resume',action:()=>go(prev)},
  {label:'Return to nursery',action:habitat},
